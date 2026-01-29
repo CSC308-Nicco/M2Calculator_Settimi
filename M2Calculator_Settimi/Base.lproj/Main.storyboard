@@ -29,6 +29,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="?">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="operatorBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QHR-f0-bkp"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLk-Gx-iHd">
                                 <rect key="frame" x="154" y="213" width="223" height="58"/>
@@ -52,12 +55,23 @@
                                 <rect key="frame" x="16" y="359" width="361" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Calculate"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPi-AJ-Srz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="operand1Text" destination="jDM-hf-hCd" id="jIx-ME-I3l"/>
+                        <outlet property="operand2Text" destination="PLk-Gx-iHd" id="D3m-mV-1CF"/>
+                        <outlet property="resultText" destination="cLp-4V-jm0" id="p1I-Vw-y87"/>
+                        <outlet property="selectOperator" destination="eAc-ER-i0X" id="oUa-aA-Hhh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +83,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
