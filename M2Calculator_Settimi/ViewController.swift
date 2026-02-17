@@ -35,9 +35,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateBtn(_ sender: UIButton) {
-        let var1 = Int(operand1Text.text!)!
-        let var2 = Int(operand2Text.text!)!
-        let op = selectOperator.title(for: .normal)
+        var var1: Int
+        var var2: Int
+        let op = selectOperator.title(for: .normal) ?? "?"
+        
+        if let op1Text = operand1Text.text, let int1 = Int(op1Text)
+        {
+            var1 = int1
+        }
+        else
+        {
+            var1 = 0
+            operand1Text.text = "0"
+        }
+        
+        if let op2Text = operand2Text.text, let int2 = Int(op2Text)
+        {
+            var2 = int2
+        }
+        else
+        {
+            var2 = 0
+            operand2Text.text = "0"
+        }
+        
         var result: Int
         
         switch (op)
