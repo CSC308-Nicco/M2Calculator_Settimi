@@ -34,29 +34,39 @@ class ViewController: UIViewController {
         present(actionSheet, animated: true)
     }
     
+    func showAlert(message: String)
+    {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
     @IBAction func calculateBtn(_ sender: UIButton) {
-        var var1: Int
-        var var2: Int
-        let op = selectOperator.title(for: .normal) ?? "?"
         
-        if let op1Text = operand1Text.text, let int1 = Int(op1Text)
+        
+        guard let op = selectOperator.title(for: .normal), op != "?" else
         {
-            var1 = int1
+            showAlert(message: "Please select an operator.")
+            
+            
+            return
         }
-        else
+        
+        guard let op1Text = operand1Text.text, let var1 = Int(op1Text) else
         {
-            var1 = 0
+            showAlert(message: "Please enter the first operand.")
+            
             operand1Text.text = "0"
+            return
         }
         
-        if let op2Text = operand2Text.text, let int2 = Int(op2Text)
+        guard let op2Text = operand2Text.text, let var2 = Int(op2Text) else
         {
-            var2 = int2
-        }
-        else
-        {
-            var2 = 0
+            showAlert(message: "Please enter the second operand.")
             operand2Text.text = "0"
+            return
         }
         
         var result: Int
