@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		454D21062F6C4F3C00F00F17 /* M7Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = M7Closure.playground; path = ../M7Lotto/M7Closure.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		45ADC4152F291E3100A2E315 /* M2Calculator_Settimi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M2Calculator_Settimi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ADC42D2F291E8300A2E315 /* M2SwiftBasic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = M2SwiftBasic.playground; path = ../M2SwiftBasic.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -46,6 +47,7 @@
 		45ADC40C2F291E3100A2E315 = {
 			isa = PBXGroup;
 			children = (
+				454D21062F6C4F3C00F00F17 /* M7Closure.playground */,
 				45ADC42D2F291E8300A2E315 /* M2SwiftBasic.playground */,
 				45ADC4172F291E3100A2E315 /* M2Calculator_Settimi */,
 				45ADC4162F291E3100A2E315 /* Products */,

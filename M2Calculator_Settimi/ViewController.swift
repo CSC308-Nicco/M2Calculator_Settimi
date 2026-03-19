@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     @IBAction func operatorBtn(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
         
-        let plusAction = UIAlertAction(title: "+ (plus)", style: .default) {_ in self.selectOperator.setTitle("+", for: .normal)}
+        let plusAction = UIAlertAction(title: "+ (plus)", style: .default, handler: {_ in
+            self.selectOperator.setTitle("+", for: .normal)
+        })
         
         let minusAction = UIAlertAction(title: "- (minus)", style: .default) {_ in self.selectOperator.setTitle("-", for: .normal)}
         
